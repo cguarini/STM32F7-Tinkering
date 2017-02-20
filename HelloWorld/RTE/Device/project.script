@@ -1,0 +1,4 @@
+load STM32F746NGHx 
+project name STCubeGenerated 
+project toolchain "MDK-ARM V5" 
+project path C:\Users\cguar\Documents\GitHub\STM32F7-Tinkering\HelloWorld\RTE\Device\STM32F746NGHx\ 
