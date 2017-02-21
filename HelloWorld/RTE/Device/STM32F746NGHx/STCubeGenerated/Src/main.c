@@ -44,11 +44,15 @@ UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-#ifdef __GNUC__
+#ifdef __GNUC__/*Enables putchar and getchar functionality*/
 	#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+	#define GETCHAR_PROTOTYPE int __io_getchar()
 #else
 	#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+	#define GETCHAR_PROTOTYPE int fgetc(FILE *f)
 #endif /*__GNUC__*/
+	
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,10 +63,16 @@ static void MX_USART1_UART_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-PUTCHAR_PROTOTYPE{
+PUTCHAR_PROTOTYPE{/*So that putchar can be done through UART and terminal*/
 	HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
 	return ch;
 }
+GETCHAR_PROTOTYPE{/*so that getchar can be done through UART and terminal*/
+	char ch;
+	HAL_UART_Receive(&huart1,(uint8_t *)&ch,1,0xFFFF);
+	return ch;
+}
+
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -71,9 +81,9 @@ PUTCHAR_PROTOTYPE{
 
 int main(void)
 {
-
+//coolbeans
   /* USER CODE BEGIN 1 */
-
+	char ch;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -89,7 +99,7 @@ int main(void)
   MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
-	printf("Hello World!\n");
+	printf("Hello World!\n\r");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,7 +107,8 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-	
+	ch=getchar();
+	putchar(ch);
   /* USER CODE BEGIN 3 */
 
   }
