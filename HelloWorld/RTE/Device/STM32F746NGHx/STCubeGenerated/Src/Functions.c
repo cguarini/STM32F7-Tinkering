@@ -5,10 +5,13 @@ Author: Chris Guarini
 #include "Functions.h"
 #include "stm32f7xx_hal.h"
 
+
+/*
+Prints a newline and carriage return character
+*/
 void nextLine(void){
 	printf("\n\r");
 }
-
 
 
 /*
@@ -21,6 +24,7 @@ int getString(char String[],int buffer){
 	char ch;//for use by getchar()
 	for(int i=0;i<buffer;i++){//Loop through the characters in the terminal until the buffer runs out
 		ch=getchar();//get a character from the terminal
+		putchar(ch);//echo the character
 		if(ch==0xD){//check for carriage return
 			String[i]=0x00;//Null terminate string
 			return 0;//Break loop, function returns a string successfully
@@ -33,3 +37,31 @@ int getString(char String[],int buffer){
 	String[buffer]=0x00;//Null terminate the partial string
 	return 1;//Buffer ran out before carriage return, string is not null terminated
 }
+
+
+
+/*
+Prints String to the terminal using putchar. Will loop until it
+hits null or the buffer runs out.
+@param String[] - The string to print
+			 buffer   - The max amount of characters it will print
+*/
+int putString(char String[], int buffer){
+	for(int i=0; i<=buffer;i++){//Loop through every character in the string
+		if(String[i]==0x00){//Check if character is null
+			return 0;//String successfully printed
+		}
+		else{
+			putchar(String[i]);//Print the character
+		}
+	}
+	return 1;//String was too large, the entire string was not printed
+}
+
+
+
+
+
+
+
+

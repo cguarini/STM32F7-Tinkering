@@ -557,7 +557,7 @@ I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x58AA5BED)
-F (../Src/main.c)(0x58AB9B40)(-c --cpu Cortex-M7.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include --C99-IC:\Users\cguar\Documents\GitHub\STM32F7-Tinkering\HelloWorld\RTE\Device\STM32F746NGHx\STCubeGenerated\MDK-ARM\RTE\_STCubeGenerated-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o stcubegenerated\main.o --omf_browse stcubegenerated\main.crf --depend stcubegenerated\main.d)
+F (../Src/main.c)(0x58AC634C)(-c --cpu Cortex-M7.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include --C99-IC:\Users\cguar\Documents\GitHub\STM32F7-Tinkering\HelloWorld\RTE\Device\STM32F746NGHx\STCubeGenerated\MDK-ARM\RTE\_STCubeGenerated-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o stcubegenerated\main.o --omf_browse stcubegenerated\main.crf --depend stcubegenerated\main.d)
 I (../Inc/main.h)(0x58AB7CFD)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h)(0x58AA5BED)
 I (../Inc/stm32f7xx_hal_conf.h)(0x58AB7CFC)
@@ -588,6 +588,7 @@ I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x58AA5BED)
+I (../Src/Functions.h)(0x58AC6292)
 F (../Src/stm32f7xx_it.c)(0x58AB7CFC)(-c --cpu Cortex-M7.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include --C99-IC:\Users\cguar\Documents\GitHub\STM32F7-Tinkering\HelloWorld\RTE\Device\STM32F746NGHx\STCubeGenerated\MDK-ARM\RTE\_STCubeGenerated-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o stcubegenerated\stm32f7xx_it.o --omf_browse stcubegenerated\stm32f7xx_it.crf --depend stcubegenerated\stm32f7xx_it.d)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h)(0x58AA5BED)
 I (../Inc/stm32f7xx_hal_conf.h)(0x58AB7CFC)
@@ -620,3 +621,36 @@ I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h)(0x58AA5BED)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x58AA5BED)
 I (../Inc/stm32f7xx_it.h)(0x58AB7CFC)
+F (..\Src\Functions.c)(0x58AC62DF)(-c --cpu Cortex-M7.fp.sp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include --C99-IC:\Users\cguar\Documents\GitHub\STM32F7-Tinkering\HelloWorld\RTE\Device\STM32F746NGHx\STCubeGenerated\MDK-ARM\RTE\_STCubeGenerated-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F746xx -DUSE_HAL_DRIVER -DSTM32F746xx-o stcubegenerated\functions.o --omf_browse stcubegenerated\functions.crf --depend stcubegenerated\functions.d)
+I (..\Src\Functions.h)(0x58AC6292)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h)(0x58AA5BED)
+I (../Inc/stm32f7xx_hal_conf.h)(0x58AB7CFC)
+I (../Inc/main.h)(0x58AB7CFD)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h)(0x58AA5BED)
+I (../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h)(0x58AA5BE9)
+I (../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h)(0x58AA5BE9)
+I (../Drivers/CMSIS/Include/core_cm7.h)(0x58AA5BEC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F6BD88)
+I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x58AA5BEC)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58AA5BEC)
+I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58AA5BEC)
+I (../Drivers/CMSIS/Include/core_cmSimd.h)(0x58AA5BEC)
+I (../Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h)(0x58AA5BE9)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58AA5BED)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F6BD88)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio_ex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c_ex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h)(0x58AA5BED)
+I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h)(0x58AA5BED)
+F (..\Src\Functions.h)(0x58AC6292)()

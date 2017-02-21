@@ -17,3 +17,18 @@ Will loop until it hits a carriage return, or until the buffer runs out
 				buffer - 	 Max length of the string
 */
 int getString(char String[],int buffer);
+
+
+/*
+Prints String to the terminal using putchar. Will loop until it
+hits null or the buffer runs out.
+@param String[] - The string to print
+			 buffer   - The max amount of characters it will print
+*/
+int putString(char String[], int buffer);
+
+/*
+Prints a newline and carriage return character
+*/
+void nextLine(void);
+

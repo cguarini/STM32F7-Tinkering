@@ -502,12 +502,12 @@
             <File>
               <FileName>Functions.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Functions.c</FilePath>
+              <FilePath>..\Src\Functions.c</FilePath>
             </File>
             <File>
               <FileName>Functions.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Functions.h</FilePath>
+              <FilePath>..\Src\Functions.h</FilePath>
             </File>
           </Files>
         </Group>

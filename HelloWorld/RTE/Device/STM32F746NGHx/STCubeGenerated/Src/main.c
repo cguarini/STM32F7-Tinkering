@@ -33,6 +33,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f7xx_hal.h"
+#include "Functions.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -83,7 +84,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	char ch;
+	char String[MAX_LENGTH];
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -107,8 +108,10 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-	ch=getchar();
-	putchar(ch);
+	nextLine();
+	getString(String, MAX_LENGTH);
+	nextLine();
+	putString(String, MAX_LENGTH);
   /* USER CODE BEGIN 3 */
 
   }

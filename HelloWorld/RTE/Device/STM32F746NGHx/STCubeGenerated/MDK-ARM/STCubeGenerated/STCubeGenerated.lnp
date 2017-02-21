@@ -20,6 +20,7 @@
 "stcubegenerated\stm32f7xx_hal_msp.o"
 "stcubegenerated\main.o"
 "stcubegenerated\stm32f7xx_it.o"
+"stcubegenerated\functions.o"
 --library_type=microlib --strict --scatter "STCubeGenerated\STCubeGenerated.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
