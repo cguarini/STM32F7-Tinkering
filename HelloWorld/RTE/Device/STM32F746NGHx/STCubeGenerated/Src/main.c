@@ -81,7 +81,7 @@ GETCHAR_PROTOTYPE{/*so that getchar can be done through UART and terminal*/
 
 int main(void)
 {
-//coolbeans
+
   /* USER CODE BEGIN 1 */
 	char ch;
   /* USER CODE END 1 */
