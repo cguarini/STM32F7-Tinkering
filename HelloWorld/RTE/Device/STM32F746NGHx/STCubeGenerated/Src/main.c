@@ -33,13 +33,14 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f7xx_hal.h"
-#include "Functions.h"
 
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
+
+TIM_HandleTypeDef htim10;
 
 UART_HandleTypeDef huart1;
 
@@ -61,6 +62,10 @@ void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM10_Init(void);
+                                    
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+                                
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -98,6 +103,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART1_UART_Init();
+  MX_TIM10_Init();
 
   /* USER CODE BEGIN 2 */
 	printf("Hello World!\n\r");
@@ -108,10 +114,7 @@ int main(void)
   while (1)
   {
   /* USER CODE END WHILE */
-	nextLine();
-	getString(String, MAX_LENGTH);
-	nextLine();
-	putString(String, MAX_LENGTH);
+
   /* USER CODE BEGIN 3 */
 
   }
@@ -176,6 +179,41 @@ void SystemClock_Config(void)
 
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+}
+
+/* TIM10 init function */
+static void MX_TIM10_Init(void)
+{
+
+  TIM_OC_InitTypeDef sConfigOC;
+
+  htim10.Instance = TIM10;
+  htim10.Init.Prescaler = 1024;
+  htim10.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim10.Init.Period = 0;
+  htim10.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim10.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim10) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_OC_Init(&htim10) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sConfigOC.OCMode = TIM_OCMODE_FORCED_ACTIVE;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_OC_ConfigChannel(&htim10, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  HAL_TIM_MspPostInit(&htim10);
+
 }
 
 /* USART1 init function */
